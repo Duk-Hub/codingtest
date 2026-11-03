@@ -12,23 +12,14 @@ public class Main {
             boolean isOnly = true;
             for(int j = 0; j <= n - i; j++){
                 String s = str.substring(j,j+i);
-                char[] tmp = s.toCharArray();
-                int index = 0;
-                for(int k = j + 1; k < n; k++){
-                    if(arr[k] != tmp[index]){
-                        index = 0;
-                        continue;
-                    }
-                    index++;
-                    if(index == i){
+                for(int k = j + 1; k <= n - i; k++){
+                    String target= str.substring(k, k+i);
+                    if(s.equals(target)){
                         isOnly = false;
                         break;
                     }
                 }
-
-                if(!isOnly){
-                    break;
-                }
+                if(!isOnly) break;
             }
             if(isOnly){
                 answer = i;
