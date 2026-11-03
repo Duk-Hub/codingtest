@@ -11,25 +11,16 @@ public class Main {
         // Please write your code here.
 
         int maxCnt = Integer.MIN_VALUE;
-        for(int i = 1; i <= 10000; i++){
-            boolean hasNumber = false;
-            for(int j = 0; j < n; j++){
-                if(arr[j] == i){
-                    hasNumber = true;
-                    break;
-                }
-            }
-
-            if(!hasNumber) continue;
+        for(int i = 0; i < n; i++){
+            int minNum = arr[i];
             int cnt = 0;
             for(int j = 0; j < n; j++){
-                if(arr[j] < i) continue;
-                if(arr[j] - i <= k) cnt++;
+                if(arr[j] >= minNum && arr[j] - minNum <=k){
+                    cnt++;
+                }
             }
-
             maxCnt = Math.max(maxCnt,cnt);
         }
-
         System.out.println(maxCnt);
     }
 }
