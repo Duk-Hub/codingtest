@@ -10,25 +10,16 @@ public class Main {
         // Please write your code here.
 
         Arrays.sort(arr);
-        for(int a = 1; a <= 40; a++){
-            for(int b = a; b <= 40; b++){
-                for(int c = b; c <= 40; c++){
-                    for(int d = c; d <= 40; d++){
-                        int[] tmp = {
-                            a, b, c, d,
-                            a + b, b + c, c + d, d + a, a + c, b + d,
-                            a + b + c, a + b + d, a + c + d, b + c + d,
-                            a + b + c + d
-                        };
+        int sumAll = arr[14];
+        int a = arr[0];
+        int b = arr[1];
+        int c = 0;
+        if(arr[2] != a + b){
+            c = arr[2];
+        } else c = arr[3];
+        int d = sumAll - a - b - c;
 
-                        Arrays.sort(tmp);
-                        if(Arrays.equals(arr,tmp)){
-                            System.out.println(a + " " + b + " " + c + " " + d);
-                        }
-                    }
-                }
-            }
-        }
+        System.out.println(a + " " + b + " " + c + " " + d);
 
     }
 }
