@@ -7,19 +7,15 @@ public class Main {
         int c = sc.nextInt();
         int d = sc.nextInt();
         // Please write your code here.
-        int[] arr = new int[100];
-        for(int i = a; i < b; i++){
-            arr[i]++;
+        if(isIntersecting(a,b,c,d)){
+            System.out.println(Math.max(b,d) - Math.min(a,c));
+        } else {
+            System.out.println((b-a) + (d-c));
         }
-        for(int i = c; i < d; i++){
-            arr[i]++;
-        }
+    }
 
-        int cnt = 0;
-        for(int n : arr){
-            if(n != 0) cnt++;
-        }
-
-        System.out.println(cnt);
+    public static boolean isIntersecting(int a, int b, int c, int d){
+        if(b < c || d < a) return false;
+        return true;
     }
 }
