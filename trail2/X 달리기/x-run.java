@@ -6,7 +6,6 @@ public class Main {
         // Please write your code here.
 
         for(int i = 1; i <= 10000; i++){
-            int[] arr = new int[i];
             int distance = 0;
             if (i == 1){
                 distance = 1;
