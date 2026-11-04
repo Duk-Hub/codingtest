@@ -8,16 +8,15 @@ public class Main {
         int x4 = sc.nextInt();
         // Please write your code here.
 
-        boolean isIntersecting = false;
-        if(x1 >= x3 && x1 <= x4) isIntersecting = true;
-        if(x2 >= x3 && x2 <= x4) isIntersecting = true;
-        if(x3 >= x1 && x3 <= x2) isIntersecting = true;
-        if(x4 >= x1 && x4 <= x2) isIntersecting = true;
-
-        if(isIntersecting){
+        if(isIntersecting(x1,x2,x3,x4)){
             System.out.println("intersecting");
         } else {
             System.out.println("nonintersecting");
         }
+    }
+
+    public static boolean isIntersecting(int x1, int x2, int x3, int x4){
+        if(x2 < x3 || x4 < x1) return false;
+        return true;
     }
 }
