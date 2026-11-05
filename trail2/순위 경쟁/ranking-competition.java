@@ -30,14 +30,15 @@ public class Main {
         System.out.println(cnt);
     }
 
-    public static String getWinner(int a, int b, int c){
-        if(a == b && b == c) return "ABC";
-        if(a == b && a > c) return "AB";
-        if(a == c && a > b) return "AC";
-        if(b == c && b > a) return "BC";
-        if(a > b && a > c) return "A";
-        if(b > a && b > c) return "B";
-        if(c > a && c > b) return "C";
-        return "";
+    public static String getWinner(int a, int b, int c) {
+        int max = Math.max(a, Math.max(b, c));
+
+        String winner = "";
+
+        if (a == max) winner += "A";
+        if (b == max) winner += "B";
+        if (c == max) winner += "C";
+
+        return winner;
     }
 }
