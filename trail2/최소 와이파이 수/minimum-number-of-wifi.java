@@ -12,14 +12,8 @@ public class Main {
         int cnt = 0;
         int range = 2 * m;
         for(int i = 0; i < n; i++){
-            if(arr[i] == 0){
-                continue;
-            }
             if(arr[i] == 1){
                 cnt++;
-                if(i + range >= n){
-                    break;
-                }
                 i += range;
             }
         }
