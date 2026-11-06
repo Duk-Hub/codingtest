@@ -19,7 +19,6 @@ public class Main {
                     arr[i] = arr[i+1];
                     arr[i+1] = tmp;
                     sorted = false;
-                    break;
                 }
             }
         }
