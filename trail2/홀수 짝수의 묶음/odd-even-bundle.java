@@ -3,12 +3,11 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
-        int[] numbers = new int[N];
         int oddCnt = 0;
         int evenCnt = 0;
         for (int i = 0; i < N; i++) {
-            numbers[i] = sc.nextInt();
-            if(numbers[i] % 2 == 0) evenCnt++;
+            int number = sc.nextInt();
+            if(number % 2 == 0) evenCnt++;
             else oddCnt++;
         }
 
